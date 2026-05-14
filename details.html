@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מילוי פרטים</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>השלמת התרומה</h1>
+    </header>
+
+    <div class="container" style="max-width: 600px;">
+        <h2 class="title">מלא את פרטיך</h2>
+        
+        <div class="card" style="padding: 2rem; cursor: default;">
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" required placeholder="ישראל ישראלי">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">מייל</label>
+                    <input type="email" id="email" required placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" id="phone" required placeholder="05X-XXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="credit">מספר אשראי</label>
+                    <input type="text" id="credit" required placeholder="XXXX-XXXX-XXXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="id_num">תעודת זהות</label>
+                    <input type="text" id="id_num" required placeholder="123456789">
+                </div>
+
+                <button type="submit" class="btn-continue" style="margin-top: 1rem;">אישור ותשלום</button>
+                <div class="form-footer-note">
+                    <i class="fa-solid fa-envelope-circle-check"></i> קבלה תישלח מייד במייל
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp fa-lg"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

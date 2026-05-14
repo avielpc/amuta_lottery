@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחירת מתנות</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>אתר ההגרלות הגדול</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="title">בחר אילו מתנות אתה מעוניין</h2>
+        
+        <div class="grid">
+            <div class="card cursor-default">
+                <i class="fa-solid fa-car"></i>
+                <h3>רכב</h3>
+                <div class="counter-box">
+                    <button class="counter-btn" onclick="changeValue('car-val', -1)">-</button>
+                    <span class="counter-value" id="car-val">2</span>
+                    <button class="counter-btn" onclick="changeValue('car-val', 1)">+</button>
+                </div>
+            </div>
+            
+            <div class="card cursor-default">
+                <i class="fa-solid fa-house"></i>
+                <h3>בית</h3>
+                <div class="counter-box">
+                    <button class="counter-btn" onclick="changeValue('home-val', -1)">-</button>
+                    <span class="counter-value" id="home-val">0</span>
+                    <button class="counter-btn" onclick="changeValue('home-val', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="card cursor-default">
+                <i class="fa-solid fa-bicycle"></i>
+                <h3>אופניים חשמליים</h3>
+                <div class="counter-box">
+                    <button class="counter-btn" onclick="changeValue('bike-val', -1)">-</button>
+                    <span class="counter-value" id="bike-val">0</span>
+                    <button class="counter-btn" onclick="changeValue('bike-val', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="card cursor-default">
+                <i class="fa-solid fa-plane"></i>
+                <h3>חופשה זוגית</h3>
+                <div class="counter-box">
+                    <button class="counter-btn" onclick="changeValue('vacation-val', -1)">-</button>
+                    <span class="counter-value" id="vacation-val">0</span>
+                    <button class="counter-btn" onclick="changeValue('vacation-val', 1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="details.html" class="btn-continue">המשך</a>
+    </div>
+
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp fa-lg"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

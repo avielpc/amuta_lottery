@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #1e3a8a; /* כחול כהה ואמין */
+    --secondary-color: #3b82f6; /* כחול בהיר */
+    --accent-color: #f59e0b; /* זהב/כתום להדגשות */
+    --bg-color: #f3f4f6; /* אפור בהיר מאוד לרקע */
+    --text-color: #1f2937;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* מערכת גריד לכרטיסיות (מתאים למחשב ונייד) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* עיצוב כרטיסיות (עמותות, כרטיסים, פרסים) */
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-color: var(--secondary-color);
+}
+
+.card.active {
+    border-color: var(--accent-color);
+    background-color: #fffbeb;
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+}
+
+/* כפתורי המשך */
+.btn-continue {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 3rem auto 1rem;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-continue:hover {
+    background-color: #d97706;
+}
+
+/* קאונטרים (כפתורי פלוס ומינוס) */
+.counter-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.counter-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.counter-btn:hover { background-color: var(--secondary-color); }
+.counter-value { font-size: 1.5rem; font-weight: bold; min-width: 30px; }
+
+/* טפסים */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--secondary-color);
+}
+
+.form-footer-note {
+    text-align: center;
+    margin-top: 1rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+/* Footer & WhatsApp */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links a { color: #9ca3af; text-decoration: none; }
+.footer-links a:hover { color: white; }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.whatsapp-float:hover { transform: scale(1.05); }

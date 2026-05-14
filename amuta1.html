@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחירת כרטיסים</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>אתר ההגרלות הגדול</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="title">בחר כמה כרטיסים אתה מעוניין</h2>
+        
+        <div class="grid">
+            <div class="card" onclick="selectTicket(this)">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>10 כרטיסים</h3>
+            </div>
+            <div class="card" onclick="selectTicket(this)">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>20 כרטיסים</h3>
+            </div>
+            <div class="card" onclick="selectTicket(this)">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>50 כרטיסים</h3>
+            </div>
+            <div class="card" onclick="selectTicket(this)">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>100 כרטיסים</h3>
+            </div>
+        </div>
+
+        <a href="prices.html" class="btn-continue">המשך</a>
+    </div>
+
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp fa-lg"></i> דברו איתנו
+    </a>
+
+    <footer>
+        <p>© 2026 כל הזכויות שמורות</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
